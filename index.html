@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> Atomica - Home </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+	</style>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	<link rel="icon" type="image" href="/images/atom.png">
+</head>
+
+<body>
+	
+	<nav class="nav">
+        <div class="container">
+            <div class="logo">
+							<a href="#"><img class="logo" src="/images/atom.png"></img></a>
+							<a href="#" style="font-size:5vh; font-family: Yellowtail, cursive;">Atomica</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="/" style="font-family: 'Bebas Neue', cursive;">Home</a></li>
+                    <li><a href="#Subjects" style="font-family: 'Bebas Neue', cursive;">Subjects</a></li>
+                    <li><a href="#About" style="font-family: 'Bebas Neue', cursive;">About</a></li>
+										<li><a href="/contributers.html" style="font-family: 'Bebas Neue', cursive;">Contributers</a></li>
+										<li><a href="/credits.html" style="font-family: 'Bebas Neue', cursive;">Credits</a></li>
+                    <li><a onClick='href="https://forms.gle/beayYnCi6xvPcPsm7"' target="_blank" rel="noopener noreferrer" type="button" style="font-family: 'Bebas Neue', cursive;">Contact</a></li>
+										<li><a href="/feedback.html" style="font-family: 'Bebas Neue', cursive;">Feedback</a></li>
+										<li><a onClick='href="https://www.patreon.com/AtomicaTheSubjectsAssister"' target="_blank" rel="noopener noreferrer" type="button" style="font-family: 'Bebas Neue', cursive;">Donate</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+<!-- Jquery needed -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+        $(window).scroll(function() {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+                console.log("OK");
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+
+  <script src="/navbar.js"></script>
+
+  <section class="home" id="home">
+
+		<div style="height:25vh;"></div>
+
+		<h1 style="text-align:center; font-size:8vh;"> Welcome To Atomica! </h1>
+		<h1 style="text-align:center; font-size:5vh;"> Which Subject Would You Like Assistance With? </h1>
+
+		<div style="height:3vh"></div>
+
+		<div id="Buttonwrapper">
+			<a href="#Subjects"><button class="bn632-hover bn25">Choose A Subject</button></a>
+		</div>
+		
+  </section>
+
+	<section class="subjects" id="Subjects">
+
+		<div style="height:5vh;"></div>
+
+		<h1 style="text-align:center; font-size:6vh;"> Subjects </h1>
+
+		<div id="Buttonwrapper">
+			<a href="/Subjects/chemistry.html"><button class="bn632-hover bn25">Chemistry</button></a>
+		</div>
+
+		<div id="Buttonwrapper">
+			<a href="/Subjects/physics.html"><button class="bn632-hover bn25">Physics</button></a>
+		</div>
+
+		<div id="Buttonwrapper">
+			<a href="/Subjects/SystemsEngineering.html"><button class="bn632-hover bn25">Systems Engineering</button></a>
+		</div>
+
+		<div id="Buttonwrapper">
+			<a href="/Subjects/science.html"><button class="bn632-hover bn25">Science</button></a>
+		</div>
+
+		<div id="Buttonwrapper">
+			<a href="/Subject/mathematis.html"><button class="bn632-hover bn25">Mathematics</button></a>
+		</div>
+		
+		<div id="Buttonwrapper">
+			<a href="/Subjects/MoreSubjects.html"><button class="bn632-hover bn25">View More</button></a>
+		</div>
+
+	</section>
+
+	<section class="about" id="About">
+
+		<div style="height:10vh"></div>
+
+		<h1 style="text-align:center; font-size:5vh;">About Atomica</h1>
+
+		<div style="height:80vh;">
+
+			<div id="Buttonwrapper">
+				<p style="font-size:3rem; font-family: 'Bebas Neue', cursive; color:white; width: 60rem;">
+					It all begins when I was sitting in class thinking "how could I use my coding skills to make chemistry simpler for myself?". Using C++ I simplified the entire <a href="https://www.ptable.com">PTable</a> and got answers easier for every questions for my homework, this inspired me to do the same for every one of my subjects. One day I showed the software to one of my friend and they liked it, and wanted me to simplify each of their subject too. Then with my 2 brain-cells of HTML knowledge I tried to convert the C++ code to HTML and now here it is, Atomica.
+				</p>
+			</div>
+		</div>
+
+	</section>
+
+	<footer class="footer-distributed">
+
+		<div class="footer-right">
+
+			<img src="/images/torres-and-islander-flags.png" style="height:50px; width:150px;"></img>
+
+		</div>
+
+		<div class="footer-left">
+
+			<p class="footer-links">
+				<a class="link-1" href="/">Home</a>
+
+				<a href="#Subjects">Subjects</a>
+
+				<a href="#About">About</a>
+
+				<a href="#">Contributers</a>
+
+				<a href="/credits.html">Credits</a>
+
+				<a onClick='href="https://forms.gle/beayYnCi6xvPcPsm7"' target="_blank" rel="noopener noreferrer" type="button">Contact</a>
+
+				<a href="/feedback.html">Feedback</a>
+
+				<a onClick='href="https://www.patreon.com/AtomicaTheSubjectsAssister"' target="_blank" rel="noopener noreferrer" type="button">Donate</a>
+			</p>
+
+			<p>Atomica &copy; 2021 - Present | Ilyas Noori</p>
+		</div>
+
+	</footer>
+
+</body>
+
+</html>
