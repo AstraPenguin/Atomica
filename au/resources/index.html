@@ -2,7 +2,7 @@
 <html lang="en">
 
 	<head>
-		<title>Atomica | Home</title>
+		<title>Atomica | Resources</title>
 		<link rel="icon" type="image" href="/images/atom.png">
 		
 		<meta charset="UTF-8">
@@ -26,7 +26,10 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">    
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+
+		<!-- Scripts -->
+		<script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"></script>
 	</head>
 	
 	<body>
@@ -51,8 +54,8 @@
 	     			<span class="d-inline-block d-lg-none"><a href="/" class="text-primary site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-white"></span></a></span>
 		      	<nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
 		        	<ul class="site-menu main-menu js-clone-nav ml-auto ">
-		          	<li class="active"><a href="#" class="nav-link">Home</a></li>
-		            <li><a href="#Subjects" class="nav-link">Subjects</a></li>
+		          	<li class="active"><a href="/" class="nav-link">Home</a></li>
+		            <li><a href="/#Subjects" class="nav-link">Subjects</a></li>
 								<li><a href="/au/credits/" class="nav-link">Credits</a></li>
 		          </ul>
 		      	</nav>
@@ -67,37 +70,16 @@
 	  <script src="/scripts/jquery.sticky.js"></script>
 	  <script src="/scripts/main.js"></script>
 
-		<!-- Home Page Main Section -->
-	  <section class="home" id="home">
-			<div style="height:30vh;"></div>
-			<h1 style="text-align:center; font-size:8vh;"> Welcome To Atomica! </h1>
-			<h1 style="text-align:center; font-size:5vh;"> Which Subject Would You Like Assistance With? </h1>
-			<div style="height:3vh"></div>
-			<div id="Buttonwrapper">
-				<a href="#Subjects"><button class="bn632-hover bn25">Choose Subject</button></a>
+		<!-- Main Section -->
+	  <section>
+			<div style="height:10vh;"></div>
+			<h1 style="text-align:center; font-size:8vh;"> Resources </h1>
+			<div style="height: 10vh;"></div>
+			<div style="width:70%; margin:0 auto;" id="mdcontainer">
+				<zero-md src="https://api.atomica.cc/main/resources.md"></zero-md>
 			</div>
+			<div style="height: 62vh;"></div>
 	  </section>
-
-		<!-- Subjects Section -->
-		<section class="subjects" id="Subjects">
-			<div style="height:5vh;"></div>
-			<h1 style="text-align:center; font-size:6vh;"> Subjects </h1>
-			<div id="Buttonwrapper">
-				<a href="au/subjects/chemistry"><button class="bn632-hover bn25">Chemistry</button></a>
-			</div>
-			<div id="Buttonwrapper">
-				<a href="au/subjects/physics"><button class="bn632-hover bn25">Physics</button></a>
-			</div>
-			<div id="Buttonwrapper">
-				<a href="au/subjects/biology"><button class="bn632-hover bn25">Biology</button></a>
-			</div>
-			<div id="Buttonwrapper">
-				<a href="au/subjects/mathematics"><button class="bn632-hover bn25">Mathematics</button></a>
-			</div>
-			<div id="Buttonwrapper">
-				<a href="au/subjects/more-subjects"><button class="bn632-hover bn25">View More</button></a>
-			</div>
-		</section>
 	
 		<!-- Site footer -->
 	  <footer class="site-footer">
@@ -112,15 +94,15 @@
 	          <h6 style="font-size:4vh;">Quick Links</h6>
 	          <ul class="footer-links">
 	            <li><a href="/">Home</a></li>
-	            <li><a href="au/subjects/more-subjects/">View More Subjects</a></li>
-							<li><a href="au/credits/">Credits</a></li>
-							<li><a href="au/sitemap/">Sitemap</a></li>
+	            <li><a href="/au/subjects/more-subjects/">View More Subjects</a></li>
+							<li><a href="/au/credits/">Credits</a></li>
+							<li><a href="/au/sitemap/">Sitemap</a></li>
 	          </ul>
 	        </div>
 	        <div class="col-xs-6 col-md-3">
 	          <h6 style="font-size:4vh;">Extra Stuff</h6>
 	          <ul class="footer-links">
-	            <li><a href="au/resources/">Resources</a></li>
+	            <li><a href="/au/resources/">Resources</a></li>
 	          </ul>
 	        </div>
 					<div class="col-xs-6 col-md-3">
@@ -147,4 +129,28 @@
 	    </div>
 		</footer>
 	</body>
+
+	<script>
+    function getQuery(key) {
+        var query = window.location.search.substring(1);
+        var key_values = query.split("&");
+        var params = {};
+        key_values.map(function (key_val) {
+            var key_val_arr = key_val.split("=");
+            params[key_val_arr[0]] = key_val_arr[1];
+        });
+        if (typeof params[key] != "undefined") {
+            return params[key];
+        }
+        return "";
+    }
+
+    window.onload = function () {
+        md = document.createElement("zero-md")
+        md.setAttribute("src", getQuery("src"))
+        md.setAttribute("no-shadow", "")
+        document.getElementById("mdcontainer").append(md)
+    }
+	</script>
+	
 </html>
