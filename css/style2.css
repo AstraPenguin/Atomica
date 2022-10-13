@@ -1,6 +1,6 @@
 html,
 body {
-	background-image: linear-gradient(135deg, #9796f0 10%, #FBC7D4 100%);
+	background-image: linear-gradient(135deg, #f5f7fa 10%, #c3cfe2 100%);
 	margin: 0;
   padding: 0;
   width: 100%;
@@ -244,7 +244,7 @@ h6 {
 /* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
+  padding: 12px; /* Some padding */
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -255,7 +255,7 @@ input[type=text], select, textarea {
 
 input[type=email], select, textarea {
   width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
+  padding: 12px; /* Some padding */
   border: 1px solid #ccc; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
