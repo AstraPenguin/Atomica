@@ -1,6 +1,9 @@
 html,
 body {
-	background-image: linear-gradient(135deg, #F6D242 10%, #FF52E5 100%);
+	background: #B9C2A9;
+	background: -webkit-linear-gradient(top left, #B9C2A9, #A9B3E7);
+	background: -moz-linear-gradient(top left, #B9C2A9, #A9B3E7);
+	background: linear-gradient(to bottom right, #B9C2A9, #A9B3E7);
 	margin: 0;
   padding: 0;
   width: 100%;
